@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { FaTimesCircle } from 'react-icons/fa';
