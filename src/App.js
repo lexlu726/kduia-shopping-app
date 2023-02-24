@@ -1,20 +1,42 @@
+/* eslint-disable */
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-// eslint-disable-next-line
 import { AppProvider } from './context/AppContext';
-// eslint-disable-next-line
 import CartValue from './components/CartValue';
-// eslint-disable-next-line
 import ExpenseList from './components/ExpenseList';
-// eslint-disable-next-line
 import ItemSelected from './components/ItemSelected';
-// eslint-disable-next-line
 import Location from './components/Location';
 
 function App() {
   return (
-    <div className="App">
+    <AppProvider>
+    <div className="container">
+        <h1 className ="mt-3">Shopping App</h1> 
+        <div className= "row mt-3">
+            <div className = "col-sm">
+            <CartValue />
+            </div>
+            <div className = "col-sm">
+            <Location />
+            </div>
+        </div> 
+        <h2 className ="mt-3">Shopping Cart</h2>
+        <div className="row">
+            <div className= "col-sm">
+                <ExpenseList/>
+            </div>
+        </div>
+        <h3 className="mt-3">Add Item</h3>
+        <div className= "row mt-3">
+            <div className ="col-sm">
+                <ItemSelected/>
+            </div>
+
+        </div>
+
     </div>
+
+</AppProvider>
   );
 }
 
